@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: order-service
+
+  datasource:
+    url: jdbc:postgresql://postgres-master:5432/orderdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  cloud:
+    config:
+      enabled: false   # ❌ Disable config server for now
+
+# ✅ Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+# ✅ Eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka #defaultZone: http://admin:admin@discovery-server:8761/eureka
+
+
+  instance:
+    prefer-ip-address: true

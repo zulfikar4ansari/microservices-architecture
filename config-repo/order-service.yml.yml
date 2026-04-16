@@ -1,0 +1,12 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres-master:5432/orderdb
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+spring:
+  kafka:
+    bootstrap-servers: kafka:9092
