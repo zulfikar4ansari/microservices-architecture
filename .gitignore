@@ -1,27 +1,140 @@
-# Maven
+# ==============================
+# 🧱 BUILD ARTIFACTS
+# ==============================
 target/
+build/
+out/
+*.class
 *.jar
 *.war
+*.ear
 
-# Logs
+# ==============================
+# 📦 MAVEN / GRADLE
+# ==============================
+.mvn/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ==============================
+# 🧾 LOGS
+# ==============================
 logs/
 *.log
+*.log.*
+log/
+*.out
 
-# IDE
+# ==============================
+# ⚙️ SPRING BOOT
+# ==============================
+application-local.yml
+application-dev.yml
+application-test.yml
+application-prod.yml
+
+# (Optional - ignore all except default)
+# application*.yml
+
+# ==============================
+# 🔐 ENV / SECRETS
+# ==============================
+.env
+.env.*
+*.key
+*.pem
+*.crt
+*.p12
+*.jks
+secrets/
+config/secrets/
+
+# ==============================
+# 🧠 IDE / EDITOR
+# ==============================
+# IntelliJ
 .idea/
 *.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
 .vscode/
 
-# OS files
+# ==============================
+# 💻 OS FILES
+# ==============================
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Env files
-.env
+# ==============================
+# 🐳 DOCKER
+# ==============================
+docker-compose.override.yml
+*.tar
+*.gz
 
-# Build
-build/
+# ==============================
+# ☸️ KUBERNETES
+# ==============================
+*.kubeconfig
+kubeconfig*
+*.secret.yaml
 
-# Docker
+# ==============================
+# 📊 MONITORING / LOGGING
+# ==============================
+*.prom
+*.tmp
+
+# ==============================
+# 📨 KAFKA / MESSAGING
+# ==============================
+/kafka-logs/
+/zookeeper/
+/data/kafka/
+/data/zookeeper/
+
+# ==============================
+# 🧪 TEST / COVERAGE
+# ==============================
+/coverage/
+/reports/
+/test-output/
+
+# ==============================
+# 📁 UPLOADS / TEMP FILES
+# ==============================
+uploads/
+tmp/
+temp/
+
+# ==============================
+# 🔄 CACHE
+# ==============================
+.cache/
+node_modules/
+
+# ==============================
+# 📜 DATABASE FILES (LOCAL ONLY)
+# ==============================
+*.db
+*.sqlite
+*.h2.db
+
+# ==============================
+# 🚀 CI/CD
+# ==============================
 *.pid
 *.seed
+
+# ==============================
+# 🧩 MISC
+# ==============================
+*.swp
+*.bak
+*.tmp
