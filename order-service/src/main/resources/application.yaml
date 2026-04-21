@@ -15,16 +15,16 @@ spring:
 
   cloud:
     config:
-      enabled: false   # ❌ Disable config server for now
+      enabled: false   # Disable config server for now
 
-# ✅ Actuator
+# Actuator
 management:
   endpoints:
     web:
       exposure:
         include: health,info
 
-# ✅ Eureka
+# Eureka
 eureka:
   client:
     register-with-eureka: true
